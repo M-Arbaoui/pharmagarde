@@ -1,16 +1,22 @@
 const highlights = [
   {
-    title: '24/7 access',
-    text: 'Locate the nearest emergency pharmacy quickly when every minute matters.',
+    title: '24/7 emergency coverage',
+    text: 'Quickly discover duty pharmacies nearby when urgent medical needs arise.',
   },
   {
-    title: 'Trusted data',
-    text: 'Designed to surface duty pharmacies with clear, dependable information.',
+    title: 'Trusted local discovery',
+    text: 'Built to surface essential pharmacy information with clarity and speed.',
   },
   {
-    title: 'Morocco-first',
-    text: 'Built around Moroccan emergency pharmacy discovery and local coverage.',
+    title: 'Morocco-ready UX',
+    text: 'A simple, mobile-friendly experience tailored for people who need answers fast.',
   },
+]
+
+const facts = [
+  { label: 'Coverage', value: 'City + district' },
+  { label: 'Use case', value: 'Urgent pharmacy lookup' },
+  { label: 'Status', value: 'Ready for Vercel' },
 ]
 
 export default function HomePage() {
@@ -20,8 +26,8 @@ export default function HomePage() {
         <div className="eyebrow">PharmaGarde</div>
         <h1>Find the right emergency pharmacy in seconds.</h1>
         <p className="lead">
-          PharmaGarde is a fast, user-friendly pharmacy discovery experience for Morocco,
-          focused on emergency duty coverage and easier access to trusted care.
+          PharmaGarde helps users locate nearby duty pharmacies quickly and confidently,
+          with a clean, fast experience designed for urgent situations.
         </p>
 
         <div className="cta-row">
@@ -29,8 +35,17 @@ export default function HomePage() {
             Explore features
           </a>
           <a className="secondary-btn" href="#support">
-            Contact support
+            Deployment notes
           </a>
+        </div>
+
+        <div className="stats-row">
+          {facts.map((fact) => (
+            <div key={fact.label} className="stat-pill">
+              <span>{fact.label}</span>
+              <strong>{fact.value}</strong>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -44,10 +59,11 @@ export default function HomePage() {
       </section>
 
       <section id="support" className="support-card">
-        <h2>Deployment status</h2>
+        <h2>Deployment checkpoint</h2>
         <p>
-          This project is now configured as a deployable Next.js app for Vercel and builds
-          successfully with the expected app directory structure.
+          The app shell has been restored and verified with a successful production build.
+          Vercel can now recognize the project as a Next.js application instead of failing
+          on the missing app directory error.
         </p>
       </section>
     </main>

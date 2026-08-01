@@ -87,6 +87,33 @@ h1 {
   margin-top: 22px;
 }
 
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.stat-pill {
+  min-width: 160px;
+  background: #eff6ff;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.stat-pill span {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  margin-bottom: 5px;
+}
+
+.stat-pill strong {
+  font-size: 0.98rem;
+}
+
 .info-card,
 .support-card {
   padding: 24px;
